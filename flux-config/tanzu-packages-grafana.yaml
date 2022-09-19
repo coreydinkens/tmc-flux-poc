@@ -12,5 +12,5 @@ spec:
   prune: true
   sourceRef:
     kind: GitRepository
-    name: tanzu-packages
+    name: fluxcd-poc
 
