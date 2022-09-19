@@ -16,6 +16,6 @@ spec:
       interval: 1m
   values:
     replicaCount: 2
-    wordpressUsername=admin
-    wordpressPassword="SecurePass1!"
-    mariadb.auth.rootPassword="SecurePass1!"
+    wordpressUsername: admin
+    wordpressPassword: "SecurePass1!"
+    mariadb.auth.rootPassword: "SecurePass1!"
