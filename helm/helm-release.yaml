@@ -1,17 +1,17 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: podinfo
+  name: tmm-wordpress
   namespace: default
 spec:
   interval: 5m
   chart:
     spec:
-      chart: wordpress
+      chart: bitnami/wordpress
       version: '6.0.1'
       sourceRef:
-        kind: bitnami/wordpress
-        name: tmm-wordpress
+        kind: HelmRepository
+        name: bitnami
         namespace: default
       interval: 1m
   values:
