@@ -3,7 +3,7 @@ apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: GitRepository
 metadata:
   name: tanzu-packages
-  namespace: flux-system
+  namespace: tanzu-continuousdelivery-resources
 spec:
   interval: 30s
   ref:
