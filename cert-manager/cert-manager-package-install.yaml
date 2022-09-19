@@ -1,0 +1,15 @@
+apiVersion: packaging.carvel.dev/v1alpha1
+kind: PackageInstall
+metadata:
+  annotations:
+    tkg.tanzu.vmware.com/tanzu-package-ClusterRole: cert-manager-packages-cluster-role
+    tkg.tanzu.vmware.com/tanzu-package-ClusterRoleBinding: cert-manager-packages-cluster-rolebinding
+    tkg.tanzu.vmware.com/tanzu-package-ServiceAccount: cert-manager-packages-sa
+  name: cert-manager
+  namespace: packages
+spec:
+  serviceAccountName: cert-manager-packages-sa
+  packageRef:
+    refName: cert-manager.tanzu.vmware.com
+    versionSelection:
+      constraints: 1.5.3+vmware.2-tkg.1

@@ -1,0 +1,9 @@
+apiVersion: packaging.carvel.dev/v1alpha1
+kind: PackageRepository
+metadata:
+  name: tanzu-standard
+  namespace: tanzu-package-repo-global
+spec:
+  fetch:
+    imgpkgBundle:
+      image: projects.registry.vmware.com/tkg/packages/standard/repo:v1.5.0

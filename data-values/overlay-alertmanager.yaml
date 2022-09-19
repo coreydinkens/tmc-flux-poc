@@ -1,0 +1,13 @@
+---
+#@ load("@ytt:overlay", "overlay")
+
+#@overlay/match by=overlay.and_op(overlay.subset({"kind": "Deployment"}), overlay.subset({"metadata": {"name": "alertmanager"}}))
+---
+spec:
+  template:
+    spec:
+      containers:
+        #@overlay/match by="name",expects="0+"
+        - name: alertmanager
+          args:
+            - --cluster.listen-address=

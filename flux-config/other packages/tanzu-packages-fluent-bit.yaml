@@ -1,0 +1,16 @@
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: tanzu-packages-fluent-bit
+  namespace: flux-system
+spec:
+  dependsOn:
+    - name: tanzu-packages-pre-reqs
+  interval: 5m0s
+  path: ./fluent-bit
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: tanzu-packages
+

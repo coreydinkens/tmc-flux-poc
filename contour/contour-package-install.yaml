@@ -1,0 +1,19 @@
+apiVersion: packaging.carvel.dev/v1alpha1
+kind: PackageInstall
+metadata:
+  annotations:
+    tkg.tanzu.vmware.com/tanzu-package-ClusterRole: contour-packages-cluster-role
+    tkg.tanzu.vmware.com/tanzu-package-ClusterRoleBinding: contour-packages-cluster-rolebinding
+    tkg.tanzu.vmware.com/tanzu-package-Secret: contour-packages-values
+    tkg.tanzu.vmware.com/tanzu-package-ServiceAccount: contour-packages-sa
+  name: contour
+  namespace: packages
+spec:
+  serviceAccountName: contour-packages-sa
+  packageRef:
+    refName: contour.tanzu.vmware.com
+    versionSelection:
+      constraints: 1.18.2+vmware.1-tkg.1
+  values:
+  - secretRef:
+      name: contour-packages-values
