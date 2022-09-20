@@ -2,11 +2,12 @@
 apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: GitRepository
 metadata:
-  name: tanzu-packages
+  name: fluxcd-poc
   namespace: tanzu-continuousdelivery-resources
 spec:
   interval: 30s
   ref:
     branch: main
-  url: https://github.com/beyondelastic/gitops-tanzu-packages
+  url: https://github.com/coreydinkens/tmc-flux-poc
+
 
