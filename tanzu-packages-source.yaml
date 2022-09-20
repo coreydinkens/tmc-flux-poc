@@ -7,7 +7,7 @@ metadata:
 spec:
   interval: 30s
   ref:
-    branch: main
+    branch: master
   url: https://github.com/coreydinkens/tmc-flux-poc
 
 
