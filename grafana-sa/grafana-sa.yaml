@@ -4,6 +4,7 @@ kind: ServiceAccount
 metadata:
   annotations:
     tkg.tanzu.vmware.com/tanzu-package: grafana-packages
+    kapp.k14s.io/update-strategy: "fallback-on-replace"
   name: grafana-packages-sa
   namespace: packages
 ---
@@ -12,6 +13,7 @@ kind: ClusterRole
 metadata:
   annotations:
     tkg.tanzu.vmware.com/tanzu-package: grafana-packages
+    kapp.k14s.io/update-strategy: "fallback-on-replace"
   name: grafana-packages-cluster-role
 rules:
 - apiGroups:
@@ -26,6 +28,7 @@ kind: ClusterRoleBinding
 metadata:
   annotations:
     tkg.tanzu.vmware.com/tanzu-package: grafana-packages
+    kapp.k14s.io/update-strategy: "fallback-on-replace"
   name: grafana-packages-cluster-rolebinding
 roleRef:
   apiGroup: rbac.authorization.k8s.io
