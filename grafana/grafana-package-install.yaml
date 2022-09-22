@@ -14,7 +14,7 @@ spec:
     refName: grafana.tanzu.vmware.com
     versionSelection:
       constraints: 7.5.7+vmware.2-tkg.1
-  #serviceAccountName: grafana-packages-sa
+  serviceAccountName: kapp-controller-sa
   values:
   - secretRef:
       name: grafana-packages-values

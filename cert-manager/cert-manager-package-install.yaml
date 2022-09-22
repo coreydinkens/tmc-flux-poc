@@ -9,7 +9,7 @@ metadata:
   name: cert-manager
   namespace: packages
 spec:
-  #serviceAccountName: cert-manager-packages-sa
+  serviceAccountName: kapp-controller-sa
   packageRef:
     refName: cert-manager.tanzu.vmware.com
     versionSelection:

@@ -10,7 +10,7 @@ metadata:
   name: contour
   namespace: packages
 spec:
-  #serviceAccountName: contour-packages-sa
+  serviceAccountName: kapp-controller-sa
   packageRef:
     refName: contour.tanzu.vmware.com
     versionSelection:

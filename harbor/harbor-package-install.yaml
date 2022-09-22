@@ -14,7 +14,7 @@ spec:
     refName: harbor.tanzu.vmware.com
     versionSelection:
       constraints: 2.3.3+vmware.1-tkg.1
-  #serviceAccountName: harbor-packages-sa
+  serviceAccountName: kapp-controller-sa
   values:
   - secretRef:
       name: harbor-packages-values

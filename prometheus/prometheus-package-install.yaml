@@ -15,7 +15,7 @@ spec:
     refName: prometheus.tanzu.vmware.com
     versionSelection:
       constraints: 2.27.0+vmware.2-tkg.1
-  #serviceAccountName: prometheus-packages-sa
+  serviceAccountName: kapp-controller-sa
   values:
   - secretRef:
       name: prometheus-packages-values

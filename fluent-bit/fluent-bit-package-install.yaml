@@ -14,7 +14,7 @@ spec:
     refName: fluent-bit.tanzu.vmware.com
     versionSelection:
       constraints: 1.7.5+vmware.2-tkg.1
-  #serviceAccountName: fluent-bit-packages-sa
+  serviceAccountName: kapp-controller-sa
   values:
   - secretRef:
       name: fluent-bit-packages-values
