@@ -16,8 +16,8 @@ spec:
     namespace: tanzu-continuousdelivery-resources
   healthChecks:
     - apiVersion: helm.toolkit.fluxcd.io/v2beta1
-      kind: HelmRelease
-      name: tanzu-packages-cert-manager
-      namespace: packages
+      kind: Deployment
+      name: cert-manager
+      namespace: cert-manager
 
 

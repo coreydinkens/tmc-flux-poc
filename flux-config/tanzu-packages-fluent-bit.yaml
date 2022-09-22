@@ -16,7 +16,7 @@ spec:
     namespace: tanzu-continuousdelivery-resource
   healthChecks:
     - apiVersion: helm.toolkit.fluxcd.io/v2beta1
-      kind: HelmRelease
-      name: tanzu-packages-cert-manager
-      namespace: packages
+      kind: DaemonSet
+      name: fluent-bit
+      namespace: tanzu-system-logging
 
