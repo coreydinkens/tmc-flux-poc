@@ -7,7 +7,7 @@ metadata:
 spec:
   dependsOn:
     - name: tanzu-packages-contour
-  interval: 5m0s
+  interval: 1m0s
   path: ./prometheus
   prune: true
   sourceRef:
