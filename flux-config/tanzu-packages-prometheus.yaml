@@ -13,5 +13,10 @@ spec:
   sourceRef:
     kind: GitRepository
     name: fluxcd-poc
+  healthChecks:
+    - apiVersion: helm.toolkit.fluxcd.io/v2beta1
+      kind: HelmRelease
+      name: tanzu-packages-cert-manager
+      namespace: packages
 
 
