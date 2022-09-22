@@ -49,6 +49,7 @@ metadata:
     tkg.tanzu.vmware.com/tanzu-package-ServiceAccount: prometheus-packages-sa
     ext.packaging.carvel.dev/ytt-paths-from-secret-name.1: alertmanager-overlay
     kapp.k14s.io/update-strategy: "fallback-on-replace"
+    kapp.k14s.io/create-strategy: "fallback-on-replace"
   name: prometheus
   namespace: packages
 spec:

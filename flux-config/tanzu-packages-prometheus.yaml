@@ -16,7 +16,7 @@ spec:
   healthChecks:
     - apiVersion: apps/v1
       kind: Deployment
-      name: cert-manager
-      namespace: cert-manager
+      name: prometheus-server
+      namespace: tanzu-system-monitoring
 
 

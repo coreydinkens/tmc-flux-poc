@@ -17,6 +17,6 @@ spec:
   healthChecks:
     - apiVersion: apps/v1
       kind: Deployment
-      name: cert-manager
-      namespace: cert-manager
+      name: harbor-core
+      namespace: tanzu-system-registry
 
