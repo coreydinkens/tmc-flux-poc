@@ -48,6 +48,7 @@ metadata:
     tkg.tanzu.vmware.com/tanzu-package-Secret: contour-packages-values
     tkg.tanzu.vmware.com/tanzu-package-ServiceAccount: contour-packages-sa
     kapp.k14s.io/update-strategy: "fallback-on-replace"
+    kapp.k14s.io/create-strategy: "fallback-on-replace"
   name: contour
   namespace: packages
 spec:

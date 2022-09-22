@@ -48,6 +48,7 @@ metadata:
     tkg.tanzu.vmware.com/tanzu-package-Secret: harbor-packages-values
     tkg.tanzu.vmware.com/tanzu-package-ServiceAccount: harbor-packages-sa
     kapp.k14s.io/update-strategy: "fallback-on-replace"
+    kapp.k14s.io/create-strategy: "fallback-on-replace"
   name: harbor
   namespace: packages
 spec:
