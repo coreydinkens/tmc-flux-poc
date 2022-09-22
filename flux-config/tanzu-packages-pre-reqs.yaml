@@ -12,5 +12,5 @@ spec:
     kind: GitRepository
     name: fluxcd-poc
     namespace: tanzu-continuousdelivery-resources
-    prune: true
+
 
