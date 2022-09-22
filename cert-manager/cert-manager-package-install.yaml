@@ -5,6 +5,9 @@ metadata:
     tkg.tanzu.vmware.com/tanzu-package-ClusterRole: cert-manager-packages-cluster-role
     tkg.tanzu.vmware.com/tanzu-package-ClusterRoleBinding: cert-manager-packages-cluster-rolebinding
     tkg.tanzu.vmware.com/tanzu-package-ServiceAccount: cert-manager-packages-sa
+  labels:
+    kapp.k14s.io/app: 1648230557189564841
+    kapp.k14s.io/association: v1.4c4dae3f609e4a92a9fe2da123df7fee
   name: cert-manager
   namespace: packages
 spec:
