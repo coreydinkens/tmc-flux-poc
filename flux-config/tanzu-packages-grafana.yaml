@@ -6,7 +6,7 @@ metadata:
   namespace: tanzu-continuousdelivery-resources
 spec:
   dependsOn:
-    - name: tanzu-packages-contour
+    - name: tanzu-packages-prometheus
   interval: 5m0s
   path: ./grafana
   prune: true
