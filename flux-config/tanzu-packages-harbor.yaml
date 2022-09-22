@@ -6,7 +6,7 @@ metadata:
   namespace: tanzu-continuousdelivery-resources
 spec:
   dependsOn:
-    - name: tanzu-packages-harbor-sa
+    - name: tanzu-packages-contour
   interval: 5m0s
   path: ./harbor
   prune: true

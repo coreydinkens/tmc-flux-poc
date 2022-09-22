@@ -6,7 +6,7 @@ metadata:
   namespace: tanzu-continuousdelivery-resources
 spec:
   dependsOn:
-    - name: tanzu-packages-contour-sa
+    - name: tanzu-packages-cert-manager
   interval: 5m0s
   path: ./contour
   prune: true
