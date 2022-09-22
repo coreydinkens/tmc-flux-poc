@@ -13,7 +13,7 @@ spec:
   sourceRef:
     kind: GitRepository
     name: fluxcd-poc
-    namespace: tanzu-continuousdelivery-resource
+    namespace: tanzu-continuousdelivery-resources
   healthChecks:
     - apiVersion: apps/v1
       kind: DaemonSet
