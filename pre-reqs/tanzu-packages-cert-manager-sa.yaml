@@ -2,13 +2,13 @@
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
 metadata:
-  name: tanzu-packages-contour-sa
+  name: tanzu-packages-cert-manager-sa
   namespace: tanzu-continuousdelivery-resources
 spec:
   dependsOn:
-    - name: tanzu-packages-cert-manager
+    - name: tanzu-packages-pre-reqs
   interval: 5m0s
-  path: ./contour-sa
+  path: ./service-accounts/cert-manager-sa
   prune: true
   sourceRef:
     kind: GitRepository
