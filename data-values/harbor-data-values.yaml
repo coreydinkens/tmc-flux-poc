@@ -9,7 +9,7 @@ tlsCertificate:
   ca.crt:
 tlsCertificateSecretName:
 enableContourHttpProxy: true
-harborAdminPassword: "VMware1!"
+harborAdminPassword: VMware1!
 secretKey: 988AYwrZWswfNNtz
 database:
   password: nxs08BRGwTpfAJnk
