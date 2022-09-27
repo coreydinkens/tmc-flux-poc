@@ -38,7 +38,7 @@ trivy:
 persistence:
   persistentVolumeClaim:
     registry:
-      existingClaim: ""
+      existingClaim: "harbor-registry"
       storageClass:
       subPath: ""
       accessMode: ReadWriteOnce
@@ -50,7 +50,7 @@ persistence:
       accessMode: ReadWriteOnce
       size: 1Gi
     database:
-      existingClaim: ""
+      existingClaim: "database-data-harbor-database-0"
       storageClass:
       subPath: ""
       accessMode: ReadWriteOnce
