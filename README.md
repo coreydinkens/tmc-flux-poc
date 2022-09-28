@@ -28,7 +28,7 @@ Once Flux has been successfully enabled, add kustomizations in the following ord
 
 It is important to note this repo is not what I would consider 'production' ready due to the current package installer service account config. Next iteration is to move each SA to it's own namespace to match existing Carvel methodology
 
-Please note: This repository has been tested with TKGs (vSphere with Tanzu – 7U3). In that case, modify or remove some of the [pre-reqs](https://github.com/coreydinkens/tmc-flux-poc) content on a fork of the repository. 
+Please note: This repository has been tested with TKGs (vSphere with Tanzu – 7U3).
 
 # GitOps with FluxCD and Helm Packages
 Use these two directories to test Helm deployments with Flux:
