@@ -1,6 +1,6 @@
 # GitOps with FluxCD with Tanzu Packages or Helm Charts
 
-** Because this repository is intended to be used with Tanzu Mission Control, I am referring to certain values configured by Tanzu Mission Control such as the Flux GitRepository object. For the purposes of this example my repo is named 'fluxcd-poc' and is referred-to throughout the kustomization YAMLs. 
+**Because this repository is intended to be used with Tanzu Mission Control, I am referring to certain values configured by Tanzu Mission Control such as the Flux GitRepository object. For the purposes of this example my repo is named 'fluxcd-poc' and is referred-to throughout the kustomization YAMLs. 
 
 This is also the reason I am currently using the 'master' branch; the ability to change branches via Tanzu Mission Control is in progress
 
