@@ -19,5 +19,15 @@ spec:
       kind: Deployment
       name: contour
       namespace: tanzu-system-ingress
-
+generatorOptions:
+  disableNameSuffixHash: true
+secretGenerator:
+- name: contour-packages-values
+  namespace: packages
+  files:
+  - ./data-values/contour-data-values.yaml
+  type: Opaque
+  options:
+    annotations:
+      tkg.tanzu.vmware.com/tanzu-package: contour-packages
 

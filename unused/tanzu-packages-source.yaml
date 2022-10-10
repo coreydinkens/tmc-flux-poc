@@ -7,7 +7,7 @@ metadata:
 spec:
   interval: 30s
   ref:
-    branch: master
+    branch: convert-to-secretgenerator
   url: https://github.com/coreydinkens/tmc-flux-poc
 
 
