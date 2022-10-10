@@ -6,7 +6,7 @@ contour:
  useProxyProtocol: false
  replicas: 2
  pspNames: "vmware-system-restricted"
- logLevel: warn
+ logLevel: info
 envoy:
  service:
    type: LoadBalancer
