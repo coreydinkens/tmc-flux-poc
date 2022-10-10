@@ -19,4 +19,4 @@ spec:
       constraints: 1.18.2+vmware.1-tkg.1
   values:
   - secretRef:
-      name: contour-packages-values2
+      name: contour-packages-values
