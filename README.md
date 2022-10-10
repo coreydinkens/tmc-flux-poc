@@ -29,8 +29,9 @@ The [FluxCD Kustomization manifests](https://github.com/coreydinkens/tmc-flux-po
         1. Grafana
 
 Once Flux has been successfully enabled, add kustomizations in the following order to avoid package install/removal issues with prune enabled:
-1. Add pre-reqs folder Flux kustomization
-2. Add flux-config folder Flux kustomization
+1. Add example GitHub repo https://github.com/coreydinkens/tmc-flux-poc
+2. Add pre-reqs folder Flux kustomization
+3. Add flux-config folder Flux kustomization
 
 It is important to note this repo is not what I would consider 'production' ready due to the current package installer service account config. Verifying whether I need to move each SA to it's own namespace to match existing Carvel methodology
 
