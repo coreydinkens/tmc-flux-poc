@@ -28,7 +28,7 @@ The [FluxCD Kustomization manifests](https://github.com/coreydinkens/tmc-flux-po
       b. Prometheus
         1. Grafana
 
-Once Flux has been successfully enabled, add kustomizations in the following order to avoid package install/removal issues with prune enabled:
+Once Flux has been successfully enabled, add kustomizations in the following order, then remove in reverse to avoid package install/removal issues with prune enabled:
 1. Add pre-reqs folder Flux kustomization
 2. Add flux-config folder Flux kustomization
 
