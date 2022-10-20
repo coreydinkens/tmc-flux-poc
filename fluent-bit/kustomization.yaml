@@ -5,7 +5,7 @@ generatorOptions:
 resources:
 - fluent-bit-package-install.yaml
 secretGenerator:
-- name: contour-packages-values
+- name: fluent-bit-packages-values
   namespace: packages
   files:
   - fluent-bit-data-values.yaml
