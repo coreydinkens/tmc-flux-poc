@@ -5,10 +5,10 @@ generatorOptions:
 resources:
 - prometheus-package-install.yaml
 secretGenerator:
-- name: harbor-packages-values
+- name: prometheus-packages-values
   namespace: packages
   files:
-  - harbor-data-values.yaml
+  - prometheus-data-values.yaml
   type: Opaque
   options:
     annotations:
