@@ -1,0 +1,15 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+generatorOptions:
+  disableNameSuffixHash: true
+resources:
+- contour-package-install.yaml
+secretGenerator:
+- name: contour-packages-values
+  namespace: packages
+  files:
+  - contour.yaml
+  type: Opaque
+  options:
+    annotations:
+      tkg.tanzu.vmware.com/tanzu-package: contour-packages

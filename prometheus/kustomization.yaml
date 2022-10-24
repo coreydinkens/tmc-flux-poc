@@ -1,0 +1,23 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+generatorOptions:
+  disableNameSuffixHash: true
+resources:
+- prometheus-package-install.yaml
+secretGenerator:
+- name: prometheus-packages-values
+  namespace: packages
+  files:
+  - prometheus-data-values.yaml
+  type: Opaque
+  options:
+    annotations:
+      tkg.tanzu.vmware.com/tanzu-package: prometheus-packages
+- name: alertmanager-overlay
+  namespace: packages
+  files:
+  - overlay-alertmanager.yaml
+  type: Opaque
+  options:
+    annotations:
+      tkg.tanzu.vmware.com/tanzu-package: prometheus-packages

@@ -1,0 +1,13 @@
+---
+grafana:
+  secret:
+    type: "Opaque"
+    admin_password: "Vk13YXJlMSE="
+  pvc:
+    storageClassName:
+ingress:
+  enabled: true
+  virtual_host_fqdn: "grafana.system.tanzu"
+  prefix: "/"
+  servicePort: 80
+
