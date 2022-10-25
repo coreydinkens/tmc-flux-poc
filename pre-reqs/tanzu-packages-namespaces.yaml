@@ -5,7 +5,7 @@ metadata:
   name: tanzu-packages-namespaces
   namespace: tanzu-continuousdelivery-resources
 spec:
-  interval: 5m0s
+  interval: 1m0s
   path: ./namespaces
   prune: true
   sourceRef:
