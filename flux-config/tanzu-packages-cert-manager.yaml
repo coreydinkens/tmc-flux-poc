@@ -7,7 +7,7 @@ metadata:
 spec:
   dependsOn:
     - name: tanzu-packages-cert-manager-sa
-  interval: 5m0s
+  interval: 1m0s
   path: ./cert-manager
   prune: true
   sourceRef:
