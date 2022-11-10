@@ -16,6 +16,7 @@ spec:
   values:
     replicaCount: 2
     name: tmm-privatebin
-    service.type: loadBalancer
+    service:
+      type: LoadBalancer
     #ingress.enabled: true
     #ingress.hosts.host: privatebin.tanzu.system
