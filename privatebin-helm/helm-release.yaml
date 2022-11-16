@@ -26,6 +26,6 @@ spec:
           - path: "/"
             pathType: Prefix
     tls:
-    - secretName: letsencrypt-privbin
+    - secretName: privatebin-cert-tls
       hosts:
       - privatebin.coreydinkens.com
