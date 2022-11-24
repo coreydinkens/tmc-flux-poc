@@ -1,0 +1,23 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: harbor-cert
+  namespace: tanzu-system-registry
+spec:
+  secretName: harbor-cert-tls
+  duration: 2160h
+  renewBefore: 360h
+  subject:
+    organizations:
+      - coreydinkens
+  commonName: harbor.tmc.coreydinkens.com
+  isCA: false
+  privateKey:
+    size: 2048
+    algorithm: RSA
+    encoding: PKCS1
+  dnsNames:
+    - harbor.tmc.coreydinkens.com
+  issuerRef:
+    name: letsencrypt-clusterissuer
+    kind: ClusterIssuer
