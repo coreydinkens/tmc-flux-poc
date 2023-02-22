@@ -49,6 +49,12 @@ persistence:
       subPath: ""
       accessMode: ReadWriteOnce
       size: 1Gi
+    scanDataExports:
+      existingClaim: ""
+      storageClass: ""
+      subPath: ""
+      accessMode: ReadWriteOnce
+      size: 1Gi
     database:
       existingClaim: ""
       storageClass:
