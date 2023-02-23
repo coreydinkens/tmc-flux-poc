@@ -1,0 +1,23 @@
+apiVersion: projectcontour.io/v1
+kind: HTTPProxy
+metadata:
+  name: privatebin-httpproxy
+  namespace: privatebin
+  annotations:
+    #cert-manager.io/cluster-issuer: letsencrypt-privbin
+    #ingress.kubernetes.io/force-ssl-redirect: "true"
+    #kubernetes.io/ingress.class: contour
+    #kubernetes.io/tls-acme: "true"
+spec:
+  virtualhost:
+    fqdn: privatebin.tmc.coreydinkens.com
+    tls:
+      secretName: privatebin-cert-tls
+  routes:
+  - services:
+    - name: privatebin
+      port: 80
+    responseHeadersPolicy:
+      set:
+      - name: X-Forwarded-Proto
+        value: "%X_FORWARDED_PROTO%"
