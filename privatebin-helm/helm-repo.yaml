@@ -1,9 +1,0 @@
-# helmrepo.yaml
-apiVersion: source.toolkit.fluxcd.io/v1beta2
-kind: HelmRepository
-metadata:
-  name: privatebin
-  namespace: privatebin
-spec:
-  interval: 1m0s
-  url: https://privatebin.github.io/helm-chart
