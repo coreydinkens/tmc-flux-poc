@@ -23,7 +23,7 @@ core:
   secret: dY22M0JlXOqrpvEr
   xsrfKey: BHBVhb1lmearYTqGVOudB32ypHN4C7dc
 jobservice:
-  replicas: 0
+  replicas: 1
   secret: BCxT1grFJ2ZPosmx
 registry:
   replicas: 1
@@ -44,17 +44,18 @@ persistence:
       accessMode: ReadWriteOnce
       size: 50Gi
     jobservice:
-      existingClaim: ""
-      storageClass:
-      subPath: ""
-      accessMode: ReadWriteOnce
-      size: 1Gi
-    scanDataExports:
-      existingClaim: ""
-      storageClass: ""
-      subPath: ""
-      accessMode: ReadWriteOnce
-      size: 1Gi
+      joblog:
+        existingClaim: ""
+        storageClass: ""
+        subPath: ""
+        accessMode: ReadWriteOnce
+        size: 1Gi
+      scanDataExports:
+        existingClaim: ""
+        storageClass: ""
+        subPath: ""
+        accessMode: ReadWriteOnce
+        size: 1Gi
     database:
       existingClaim: ""
       storageClass:
