@@ -39,7 +39,7 @@ persistence:
   persistentVolumeClaim:
     registry:
       existingClaim: ""
-      storageClass:
+      storageClass: ""
       subPath: ""
       accessMode: ReadWriteOnce
       size: 50Gi
@@ -58,19 +58,19 @@ persistence:
         size: 1Gi
     database:
       existingClaim: ""
-      storageClass:
+      storageClass: ""
       subPath: ""
       accessMode: ReadWriteOnce
       size: 1Gi
     redis:
       existingClaim: ""
-      storageClass:
+      storageClass: ""
       subPath: ""
       accessMode: ReadWriteOnce
       size: 1Gi
     trivy:
       existingClaim: ""
-      storageClass:
+      storageClass: ""
       subPath: ""
       accessMode: ReadWriteOnce
       size: 5Gi
@@ -142,6 +142,7 @@ proxy:
   httpsProxy:
   noProxy: 127.0.0.1,localhost,.local,.internal
 pspNames: null
+caBundleSecretName:
 metrics:
   enabled: false
   core:
@@ -158,3 +159,25 @@ metrics:
     port: 8001
 network:
   ipFamilies: ["IPv4"]
+trace:
+  enabled: false
+  provider: jaeger
+  sample_rate: 1
+  namespace:
+  attributes:
+    application: harbor
+  jaeger:
+    endpoint: http://hostname:14268/api/traces
+    username:
+    password:
+    agent_host:
+    agent_port:
+  otel:
+    endpoint: hostname:4318
+    url_path: /v1/traces
+    compression: false
+    insecure: true
+    timeout: 10
+cache:
+  enabled: false
+  expireHours: 24
