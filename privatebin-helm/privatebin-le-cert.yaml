@@ -10,14 +10,14 @@ spec:
   subject:
     organizations:
     - coreydinkens
-  commonName: privatebin.tmc.coreydinkens.com
+  commonName: privatebin.example.com
   isCA: false
   privateKey:
     size: 2048
     algorithm: RSA
     encoding: PKCS1
   dnsNames:
-  - privatebin.tmc.coreydinkens.com
+  - privatebin.example.com
   issuerRef:
     name: letsencrypt-clusterissuer
     kind: ClusterIssuer
