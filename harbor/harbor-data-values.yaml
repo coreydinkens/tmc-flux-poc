@@ -7,8 +7,12 @@ tlsCertificate:
   tls.crt:
   tls.key:
   ca.crt:
+  tlsSecretLabels:
 tlsCertificateSecretName:
 enableContourHttpProxy: true
+contourHttpProxy:
+  timeout: 0s
+  idleTimeout: 5m
 harborAdminPassword: VMware1!
 secretKey: 988AYwrZWswfNNtz
 database:
@@ -35,6 +39,8 @@ trivy:
   replicas: 1
   gitHubToken: ""
   skipUpdate: false
+  offlineScan: false
+  timeout:
 persistence:
   persistentVolumeClaim:
     registry:
@@ -44,7 +50,7 @@ persistence:
       accessMode: ReadWriteOnce
       size: 50Gi
     jobservice:
-      joblog:
+      jobLog:
         existingClaim: ""
         storageClass: ""
         subPath: ""
