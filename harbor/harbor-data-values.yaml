@@ -27,7 +27,7 @@ core:
   secret: dY22M0JlXOqrpvEr
   xsrfKey: BHBVhb1lmearYTqGVOudB32ypHN4C7dc
 jobservice:
-  replicas: 1
+  replicas: 0
   secret: BCxT1grFJ2ZPosmx
 registry:
   replicas: 1
