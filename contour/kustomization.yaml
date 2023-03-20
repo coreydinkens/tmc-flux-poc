@@ -3,6 +3,7 @@ kind: Kustomization
 generatorOptions:
   disableNameSuffixHash: true
 resources:
+- contour-overlay-secret.yaml
 - contour-package-install.yaml
 secretGenerator:
 - name: contour-packages-values
