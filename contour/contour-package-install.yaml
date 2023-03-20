@@ -3,6 +3,7 @@ apiVersion: packaging.carvel.dev/v1alpha1
 kind: PackageInstall
 metadata:
   annotations:
+    ext.packaging.carvel.dev/ytt-paths-from-secret-name.0: contour-overlay-secret
     tkg.tanzu.vmware.com/tanzu-package-ClusterRole: contour-packages-cluster-role
     tkg.tanzu.vmware.com/tanzu-package-ClusterRoleBinding: contour-packages-cluster-rolebinding
     tkg.tanzu.vmware.com/tanzu-package-Secret: contour-packages-values
