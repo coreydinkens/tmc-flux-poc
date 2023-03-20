@@ -15,7 +15,7 @@ spec:
   packageRef:
     refName: fluent-bit.tanzu.vmware.com
     versionSelection:
-      constraints: 1.8.15+vmware.1-tkg.1
+      constraints: 1.9.5+vmware.1-tkg.1
   serviceAccountName: fluent-bit-packages-sa
   values:
   - secretRef:
