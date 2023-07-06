@@ -15,4 +15,4 @@ spec:
   packageRef:
     refName: cert-manager.tanzu.vmware.com
     versionSelection:
-      constraints: 1.10.1+vmware.1-tkg.2
+      constraints: 1.10.2+vmware.1-tkg.1
