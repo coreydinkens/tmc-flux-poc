@@ -1,6 +1,6 @@
 ---
 infrastructure_provider: vsphere
-namespace: tanzu-system-ingress
+namespace: ingress
 contour:
  configFileContents: {}
  useProxyProtocol: false
