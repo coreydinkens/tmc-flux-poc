@@ -16,7 +16,7 @@ spec:
   packageRef:
     refName: contour.tanzu.vmware.com
     versionSelection:
-      constraints: 1.22.3+vmware.1-tkg.1
+      constraints: 1.24.4+vmware.1-tkg.1
   values:
   - secretRef:
       name: contour-packages-values
