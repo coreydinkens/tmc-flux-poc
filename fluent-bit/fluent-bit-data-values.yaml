@@ -1,4 +1,4 @@
-namespace: "tanzu-system-logging"
+namespace: "logging"
 fluent_bit:
   config:
     service: |
@@ -14,9 +14,9 @@ fluent_bit:
       [OUTPUT]
         Name   syslog
         Match  kube.*
-        Host   data.mgmt.cloud.vmware.com
-        Port   514
-        Mode   udp
+        #Host   data.mgmt.cloud.vmware.com
+        #Port   514
+        #Mode   udp
         Syslog_Format        rfc5424
         Syslog_Hostname_key  tkg_cluster
         Syslog_Appname_key   pod_name
