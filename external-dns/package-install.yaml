@@ -1,0 +1,21 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: external-dns
+
+---
+apiVersion: packaging.carvel.dev/v1alpha1
+kind: PackageInstall
+metadata:
+  name: external-dns
+  namespace: infra-packages
+spec:
+  serviceAccountName: pkg-gitops-pkgi-sa
+  packageRef:
+    refName: external-dns.tanzu.vmware.com
+    versionSelection:
+      constraints: 0.13.4+vmware.2-tkg.1
+  values:
+  - secretRef:
+      name: external-dns-packages-values
