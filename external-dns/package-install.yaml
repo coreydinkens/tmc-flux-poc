@@ -9,9 +9,9 @@ apiVersion: packaging.carvel.dev/v1alpha1
 kind: PackageInstall
 metadata:
   name: external-dns
-  namespace: infra-packages
+  namespace: packages
 spec:
-  serviceAccountName: pkg-gitops-pkgi-sa
+  serviceAccountName: tanzu-packages-external-dns-sa
   packageRef:
     refName: external-dns.tanzu.vmware.com
     versionSelection:
