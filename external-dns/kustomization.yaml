@@ -4,6 +4,7 @@ generatorOptions:
   disableNameSuffixHash: true
 
 resources:
+- namespace.yaml
 - values-secret.yaml
 #- package-install.yaml
 #- aws-creds.yml
