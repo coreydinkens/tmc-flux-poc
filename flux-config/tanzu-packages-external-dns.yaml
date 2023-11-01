@@ -2,14 +2,17 @@
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
 metadata:
-  name: tanzu-packages-cert-manager
+  name: tanzu-packages-external-dns
   namespace: tanzu-continuousdelivery-resources
 spec:
   dependsOn:
-    - name: tanzu-packages-cert-manager-sa
+    - name: tanzu-packages-external-dns-sa
   interval: 1m0s
-  path: ./cert-manager
+  path: ./external-dns
   prune: true
+  postBuild:
+    substitute:
+      cluster_name: ${cluster_name}
   sourceRef:
     kind: GitRepository
     name: fluxcd-poc
@@ -17,5 +20,5 @@ spec:
   healthChecks:
     - apiVersion: apps/v1
       kind: Deployment
-      name: cert-manager
-      namespace: cert-manager
+      name: external-dns
+      namespace: external-dns
