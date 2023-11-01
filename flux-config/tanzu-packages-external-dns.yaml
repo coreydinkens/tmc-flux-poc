@@ -11,14 +11,15 @@ spec:
   path: ./external-dns
   prune: true
   postBuild:
-    substitute:
-      cluster_name: ${cluster_name}
+    substituteFrom:
+      - kind: Secret
+        name: cluster-name-secret
   sourceRef:
     kind: GitRepository
     name: fluxcd-poc
     namespace: tanzu-continuousdelivery-resources
-  healthChecks:
-    - apiVersion: apps/v1
-      kind: Deployment
-      name: external-dns
-      namespace: external-dns
+  # healthChecks:
+  #   - apiVersion: apps/v1
+  #     kind: Deployment
+  #     name: external-dns
+  #     namespace: external-dns
