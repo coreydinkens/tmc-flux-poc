@@ -6,7 +6,7 @@ generatorOptions:
 resources:
 - namespace.yaml
 - values-secret.yaml
-#- package-install.yaml
+- package-install.yaml
 #- aws-creds.yml
 
 spec:
