@@ -9,6 +9,10 @@ resources:
 #- package-install.yaml
 #- aws-creds.yml
 
+spec:
+  postBuild:
+    substitute:
+      cluster_name: ${cluster_name}
 
 # secretGenerator:
 # - name: external-dns-packages-values
