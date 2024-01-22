@@ -9,7 +9,7 @@ spec:
   packageRef:
     refName: external-dns.tanzu.vmware.com
     versionSelection:
-      constraints: 0.13.4+vmware.2-tkg.1
+      constraints: 0.13.4+vmware.2-tkg.3
   values:
   - secretRef:
       name: external-dns-packages-values
