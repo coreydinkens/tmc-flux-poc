@@ -50,18 +50,11 @@ persistence:
       accessMode: ReadWriteOnce
       size: 50Gi
     jobservice:
-      jobLog:
-        existingClaim: ""
-        storageClass: ""
-        subPath: ""
-        accessMode: ReadWriteOnce
-        size: 1Gi
-      scanDataExports:
-        existingClaim: ""
-        storageClass: ""
-        subPath: ""
-        accessMode: ReadWriteOnce
-        size: 1Gi
+      existingClaim: ""
+      storageClass: ""
+      subPath: ""
+      accessMode: ReadWriteOnce
+      size: 1Gi
     database:
       existingClaim: ""
       storageClass: ""
