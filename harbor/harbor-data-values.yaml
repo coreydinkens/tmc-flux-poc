@@ -50,11 +50,12 @@ persistence:
       accessMode: ReadWriteOnce
       size: 50Gi
     jobservice:
-      existingClaim: ""
-      storageClass: "vsan-default-storage-policy"
-      subPath: ""
-      accessMode: ReadWriteOnce
-      size: 1Gi
+      jobLog:
+        existingClaim: ""
+        storageClass: "vsan-default-storage-policy"
+        subPath: ""
+        accessMode: ReadWriteOnce
+        size: 1Gi
     database:
       existingClaim: ""
       storageClass: "vsan-default-storage-policy"
