@@ -4,7 +4,7 @@ resources:
 - cluster-name-secret.yaml
 - tanzu-gitops-serviceacct.yaml
 - tanzu-packages-namespaces.yaml
-- tanzu-packages.yaml
+#- tanzu-packages.yaml
 #- tanzu-packages-external-dns-sa.yaml
 #- tanzu-packages-cert-manager-sa.yaml
 #- tanzu-packages-contour-sa.yaml
