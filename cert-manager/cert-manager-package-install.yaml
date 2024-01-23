@@ -6,8 +6,6 @@ metadata:
     tkg.tanzu.vmware.com/tanzu-package-ClusterRole: cert-manager-packages-cluster-role
     tkg.tanzu.vmware.com/tanzu-package-ClusterRoleBinding: cert-manager-packages-cluster-rolebinding
     tkg.tanzu.vmware.com/tanzu-package-ServiceAccount: pkg-gitops-pkgi-sa
-    kapp.k14s.io/update-strategy: "fallback-on-replace"
-    kapp.k14s.io/create-strategy: "fallback-on-replace"
   name: cert-manager
   namespace: packages
 spec:

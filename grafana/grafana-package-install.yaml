@@ -7,8 +7,6 @@ metadata:
     tkg.tanzu.vmware.com/tanzu-package-ClusterRoleBinding: grafana-packages-cluster-rolebinding
     tkg.tanzu.vmware.com/tanzu-package-Secret: grafana-packages-values
     tkg.tanzu.vmware.com/tanzu-package-ServiceAccount: pkg-gitops-pkgi-sa
-    kapp.k14s.io/update-strategy: "fallback-on-replace"
-    kapp.k14s.io/create-strategy: "fallback-on-replace"
   name: grafana
   namespace: packages
 spec:
