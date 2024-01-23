@@ -3,7 +3,6 @@ kind: ServiceAccount
 metadata:
   annotations:
     tkg.tanzu.vmware.com/tanzu-package: externaldns-packages
-    kapp.k14s.io/update-strategy: "fallback-on-replace"
   name: externaldns-packages-sa
   namespace: packages
 ---
@@ -12,7 +11,6 @@ kind: ClusterRole
 metadata:
   annotations:
     tkg.tanzu.vmware.com/tanzu-package: externaldns-packages
-    kapp.k14s.io/update-strategy: "fallback-on-replace"
   name: externaldns-packages-cluster-role
 rules:
 - apiGroups:
@@ -27,7 +25,6 @@ kind: ClusterRoleBinding
 metadata:
   annotations:
     tkg.tanzu.vmware.com/tanzu-package: externaldns-packages
-    kapp.k14s.io/update-strategy: "fallback-on-replace"
   name: externaldns-packages-cluster-rolebinding
 roleRef:
   apiGroup: rbac.authorization.k8s.io
