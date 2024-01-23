@@ -5,7 +5,7 @@ metadata:
   name: external-dns
   namespace: packages
 spec:
-  serviceAccountName: externaldns-packages-sa
+  serviceAccountName: pkg-gitops-pkgi-sa
   packageRef:
     refName: external-dns.tanzu.vmware.com
     versionSelection:

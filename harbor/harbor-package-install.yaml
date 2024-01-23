@@ -6,7 +6,7 @@ metadata:
     tkg.tanzu.vmware.com/tanzu-package-ClusterRole: harbor-packages-cluster-role
     tkg.tanzu.vmware.com/tanzu-package-ClusterRoleBinding: harbor-packages-cluster-rolebinding
     tkg.tanzu.vmware.com/tanzu-package-Secret: harbor-packages-values
-    tkg.tanzu.vmware.com/tanzu-package-ServiceAccount: harbor-packages-sa
+    tkg.tanzu.vmware.com/tanzu-package-ServiceAccount: pkg-gitops-pkgi-sa
     kapp.k14s.io/update-strategy: "fallback-on-replace"
     kapp.k14s.io/create-strategy: "fallback-on-replace"
   name: harbor
@@ -16,7 +16,7 @@ spec:
     refName: harbor.tanzu.vmware.com
     versionSelection:
       constraints: 2.8.4+vmware.1-tkg.1
-  serviceAccountName: harbor-packages-sa
+  serviceAccountName: pkg-gitops-pkgi-sa
   values:
   - secretRef:
       name: harbor-packages-values

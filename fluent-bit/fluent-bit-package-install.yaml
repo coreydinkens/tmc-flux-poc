@@ -6,7 +6,7 @@ metadata:
     tkg.tanzu.vmware.com/tanzu-package-ClusterRole: fluent-bit-packages-cluster-role
     tkg.tanzu.vmware.com/tanzu-package-ClusterRoleBinding: fluent-bit-packages-cluster-rolebinding
     tkg.tanzu.vmware.com/tanzu-package-Secret: fluent-bit-packages-values
-    tkg.tanzu.vmware.com/tanzu-package-ServiceAccount: fluent-bit-packages-sa
+    tkg.tanzu.vmware.com/tanzu-package-ServiceAccount: pkg-gitops-pkgi-sa
     kapp.k14s.io/update-strategy: "fallback-on-replace"
     kapp.k14s.io/create-strategy: "fallback-on-replace"
   name: fluent-bit
@@ -16,7 +16,7 @@ spec:
     refName: fluent-bit.tanzu.vmware.com
     versionSelection:
       constraints: 2.1.6+vmware.1-tkg.1
-  serviceAccountName: fluent-bit-packages-sa
+  serviceAccountName: pkg-gitops-pkgi-sa
   values:
   - secretRef:
       name: fluent-bit-packages-values
