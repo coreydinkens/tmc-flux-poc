@@ -45,31 +45,31 @@ persistence:
   persistentVolumeClaim:
     registry:
       existingClaim: ""
-      storageClass: ""
+      storageClass: "vsan-default-storage-policy"
       subPath: ""
       accessMode: ReadWriteOnce
       size: 50Gi
     jobservice:
       existingClaim: ""
-      storageClass: ""
+      storageClass: "vsan-default-storage-policy"
       subPath: ""
       accessMode: ReadWriteOnce
       size: 1Gi
     database:
       existingClaim: ""
-      storageClass: ""
+      storageClass: "vsan-default-storage-policy"
       subPath: ""
       accessMode: ReadWriteOnce
       size: 1Gi
     redis:
       existingClaim: ""
-      storageClass: ""
+      storageClass: "vsan-default-storage-policy"
       subPath: ""
       accessMode: ReadWriteOnce
       size: 1Gi
     trivy:
       existingClaim: ""
-      storageClass: ""
+      storageClass: "vsan-default-storage-policy"
       subPath: ""
       accessMode: ReadWriteOnce
       size: 5Gi
