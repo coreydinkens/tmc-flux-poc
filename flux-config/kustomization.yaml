@@ -6,6 +6,6 @@ resources:
 - tanzu-packages-contour.yaml
 - tanzu-packages-fluent-bit.yaml
 - tanzu-packages-grafana.yaml
-- tanzu-packages-harbor.yaml
+#- tanzu-packages-harbor.yaml
 - tanzu-packages-prometheus.yaml
 
