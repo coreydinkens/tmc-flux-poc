@@ -3,21 +3,19 @@ apiVersion: packaging.carvel.dev/v1alpha1
 kind: PackageInstall
 metadata:
   annotations:
-    tkg.tanzu.vmware.com/tanzu-package-ClusterRole: prometheus-packages-cluster-role
-    tkg.tanzu.vmware.com/tanzu-package-ClusterRoleBinding: prometheus-packages-cluster-rolebinding
+    tkg.tanzu.vmware.com/tanzu-package-ClusterRole: cluster-admin-cluster-role
+    tkg.tanzu.vmware.com/tanzu-package-ClusterRoleBinding: cluster-admin-cluster-role-binding
     tkg.tanzu.vmware.com/tanzu-package-Secret: prometheus-packages-values
-    tkg.tanzu.vmware.com/tanzu-package-ServiceAccount: prometheus-packages-sa
+    tkg.tanzu.vmware.com/tanzu-package-ServiceAccount: pkg-gitops-pkgi-sa
     ext.packaging.carvel.dev/ytt-paths-from-secret-name.1: alertmanager-overlay
-    kapp.k14s.io/update-strategy: "fallback-on-replace"
-    kapp.k14s.io/create-strategy: "fallback-on-replace"
   name: prometheus
   namespace: packages
 spec:
   packageRef:
     refName: prometheus.tanzu.vmware.com
     versionSelection:
-      constraints: 2.37.0+vmware.2-tkg.1
-  serviceAccountName: prometheus-packages-sa
+      constraints: 2.45.0+vmware.1-tkg.1
+  serviceAccountName: pkg-gitops-pkgi-sa
   values:
   - secretRef:
       name: prometheus-packages-values
