@@ -20,6 +20,6 @@ spec:
       name: fluent-bit
       namespace: tanzu-system-logging
   postBuild:
-    substitute:
+    substituteFrom:
       - kind: Secret
-        name: splunk-logging
+        name: splunk-config
