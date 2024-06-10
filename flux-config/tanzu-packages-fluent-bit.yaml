@@ -22,4 +22,4 @@ spec:
   postBuild:
     substituteFrom:
       - kind: Secret
-        name: splunk-config
+        name: splunk-logging
