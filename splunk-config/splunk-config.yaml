@@ -86,11 +86,11 @@ metadata:
 spec:
   fromNamespace: packages
 
----
-apiVersion: secretgen.carvel.dev/v1alpha1
-kind: SecretImport
-metadata:
-  name: splunk-logging
-  namespace: tanzu-continuousdelivery-resources
-spec:
-  fromNamespace: packages
+# ---
+# apiVersion: secretgen.carvel.dev/v1alpha1
+# kind: SecretImport
+# metadata:
+#   name: splunk-logging
+#   namespace: tanzu-continuousdelivery-resources
+# spec:
+#   fromNamespace: packages
