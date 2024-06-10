@@ -65,7 +65,7 @@ spec:
   template:
     #type: generic
     data:
-      splunk_host: $(.secret.data.splunk_host)
+      splunk_host: $(.secret.data.splunk_url)
       splunk_port: $(.secret.data.splunk_port)
       splunk_key: $(.secret.data.splunk_key)
 ---
