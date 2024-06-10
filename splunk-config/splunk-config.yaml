@@ -54,7 +54,7 @@ metadata:
   name: splunk-config
   namespace: packages
 spec:
-  serviceAccountName: input-resource-reader # used to fetch input resources
+  serviceAccountName: input-resource-reader-splunk # used to fetch input resources
   inputResources:
   - name: secret
     ref:
