@@ -33,19 +33,19 @@ subjects:
 - kind: ServiceAccount
   name: input-resource-reader-splunk
 
----
-apiVersion: rbac.authorization.k8s.io/v1
-kind: RoleBinding
-metadata:
-  name: input-resource-reader-splunk
-  namespace: packages
-roleRef:
-  apiGroup: rbac.authorization.k8s.io
-  kind: Role
-  name: input-resource-reader-splunk
-subjects:
-- kind: ServiceAccount
-  name: input-resource-reader-splunk
+# ---
+# apiVersion: rbac.authorization.k8s.io/v1
+# kind: RoleBinding
+# metadata:
+#   name: input-resource-reader-splunk
+#   namespace: packages
+# roleRef:
+#   apiGroup: rbac.authorization.k8s.io
+#   kind: Role
+#   name: input-resource-reader-splunk
+# subjects:
+# - kind: ServiceAccount
+#   name: input-resource-reader-splunk
 
 ---
 apiVersion: secretgen.carvel.dev/v1alpha1
