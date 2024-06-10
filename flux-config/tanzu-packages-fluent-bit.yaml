@@ -18,5 +18,5 @@ spec:
     - apiVersion: apps/v1
       kind: DaemonSet
       name: fluent-bit
-      namespace: logging
+      namespace: tanzu-system-logging
 
