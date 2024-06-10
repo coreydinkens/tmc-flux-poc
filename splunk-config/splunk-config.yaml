@@ -8,7 +8,7 @@
 apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
-  name: input-resource-reader
+  name: input-resource-reader-splunk
   namespace: packages
 rules:
 - apiGroups:
@@ -28,10 +28,10 @@ metadata:
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: Role
-  name: input-resource-reader
+  name: input-resource-reader-splunk
 subjects:
 - kind: ServiceAccount
-  name: input-resource-reader
+  name: input-resource-reader-splunk
 
 ---
 apiVersion: rbac.authorization.k8s.io/v1
@@ -42,10 +42,10 @@ metadata:
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: Role
-  name: input-resource-reader
+  name: input-resource-reader-splunk
 subjects:
 - kind: ServiceAccount
-  name: input-resource-reader
+  name: input-resource-reader-splunk
 
 ---
 apiVersion: secretgen.carvel.dev/v1alpha1
