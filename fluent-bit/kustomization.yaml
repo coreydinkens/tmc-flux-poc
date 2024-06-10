@@ -8,10 +8,15 @@ resources:
 
 spec:
   postBuild:
-    substitute:
-      splunk_url: ${splunk_url}
-      splunk_port: ${splunk_port}
-      splunk_token: ${splunk_token}
+    substituteFrom:
+      - kind: Secret
+        name: cluster-name-secret
+# spec:
+#   postBuild:
+#     substitute:
+#       splunk_url: ${splunk_url}
+#       splunk_port: ${splunk_port}
+#       splunk_token: ${splunk_token}
 
 # secretGenerator:
 # - name: fluent-bit-packages-values
