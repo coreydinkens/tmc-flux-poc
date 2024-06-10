@@ -2,3 +2,10 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
 - splunk-config.yaml
+
+# spec:
+#   postBuild:
+#     substitute:
+#       splunk_url: ${splunk_url}
+#       splunk_port: ${splunk_port}
+#       splunk_token: ${splunk_token}

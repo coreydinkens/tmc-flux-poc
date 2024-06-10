@@ -3,13 +3,22 @@ kind: Kustomization
 generatorOptions:
   disableNameSuffixHash: true
 resources:
+- values-secret.yaml
 - fluent-bit-package-install.yaml
-secretGenerator:
-- name: fluent-bit-packages-values
-  namespace: packages
-  files:
-  - fluent-bit-data-values.yaml
-  type: Opaque
-  options:
-    annotations:
-      tkg.tanzu.vmware.com/tanzu-package: fluent-bit-packages
+
+spec:
+  postBuild:
+    substitute:
+      splunk_url: ${splunk_url}
+      splunk_port: ${splunk_port}
+      splunk_token: ${splunk_token}
+
+# secretGenerator:
+# - name: fluent-bit-packages-values
+#   namespace: packages
+#   files:
+#   - fluent-bit-data-values.yaml
+#   type: Opaque
+#   options:
+#     annotations:
+#       tkg.tanzu.vmware.com/tanzu-package: fluent-bit-packages

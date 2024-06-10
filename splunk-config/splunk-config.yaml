@@ -1,30 +1,44 @@
----
-apiVersion: v1
-kind: ServiceAccount
-metadata:
-  name: input-resource-reader
-  namespace: vmware-system-tmc
----
-apiVersion: rbac.authorization.k8s.io/v1
-kind: Role
-metadata:
-  name: input-resource-reader
-  namespace: vmware-system-tmc
-rules:
-- apiGroups:
-  - ""
-  resources:
-  - configmaps
-  verbs:
-  - get
-  - list
-  - watch
+# ---
+# apiVersion: v1
+# kind: ServiceAccount
+# metadata:
+#   name: input-resource-reader
+#   namespace: vmware-system-tmc
+# ---
+# apiVersion: rbac.authorization.k8s.io/v1
+# kind: Role
+# metadata:
+#   name: input-resource-reader
+#   namespace: vmware-system-tmc
+# rules:
+# - apiGroups:
+#   - ""
+#   resources:
+#   - configmaps
+#   verbs:
+#   - get
+#   - list
+#   - watch
+# ---
+# apiVersion: rbac.authorization.k8s.io/v1
+# kind: RoleBinding
+# metadata:
+#   name: input-resource-reader
+#   namespace: vmware-system-tmc
+# roleRef:
+#   apiGroup: rbac.authorization.k8s.io
+#   kind: Role
+#   name: input-resource-reader
+# subjects:
+# - kind: ServiceAccount
+#   name: input-resource-reader
+
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
   name: input-resource-reader
-  namespace: vmware-system-tmc
+  namespace: packages
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: Role
@@ -57,8 +71,8 @@ spec:
 apiVersion: secretgen.carvel.dev/v1alpha1
 kind: SecretExport
 metadata:
-  name: cluster-name-secret
-  namespace: vmware-system-tmc
+  name: splunk-config
+  namespace: packages
 spec:
   toNamespace: '*'
 
@@ -66,15 +80,15 @@ spec:
 apiVersion: secretgen.carvel.dev/v1alpha1
 kind: SecretImport
 metadata:
-  name: cluster-name-secret
+  name: splunk-config
   namespace: tanzu-continuousdelivery-resources
 spec:
-  fromNamespace: vmware-system-tmc
----
-apiVersion: secretgen.carvel.dev/v1alpha1
-kind: SecretImport
-metadata:
-  name: cluster-name-secret
-  namespace: packages
-spec:
-  fromNamespace: vmware-system-tmc
+  fromNamespace: packages
+# ---
+# apiVersion: secretgen.carvel.dev/v1alpha1
+# kind: SecretImport
+# metadata:
+#   name: splunk-config
+#   namespace: packages
+# spec:
+#   fromNamespace: vmware-system-tmc

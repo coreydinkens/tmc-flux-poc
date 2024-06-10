@@ -5,7 +5,7 @@ metadata:
   annotations:
     tkg.tanzu.vmware.com/tanzu-package-ClusterRole: cluster-admin-cluster-role
     tkg.tanzu.vmware.com/tanzu-package-ClusterRoleBinding: cluster-admin-cluster-role-binding
-    tkg.tanzu.vmware.com/tanzu-package-Secret: fluent-bit-packages-values
+    tkg.tanzu.vmware.com/tanzu-package-Secret: fluent-bit-data-values
     tkg.tanzu.vmware.com/tanzu-package-ServiceAccount: pkg-gitops-pkgi-sa
   name: fluent-bit
   namespace: packages
@@ -17,4 +17,4 @@ spec:
   serviceAccountName: pkg-gitops-pkgi-sa
   values:
   - secretRef:
-      name: fluent-bit-packages-values
+      name: fluent-bit-data-values
