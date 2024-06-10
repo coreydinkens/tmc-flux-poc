@@ -21,6 +21,5 @@ spec:
       namespace: tanzu-system-logging
   postBuild:
     substitute:
-      splunk_url: ${splunk_url}
-      splunk_port: ${splunk_port}
-      splunk_token: ${splunk_token}
+      - kind: Secret
+        name: splunk-logging
