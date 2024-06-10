@@ -19,4 +19,8 @@ spec:
       kind: DaemonSet
       name: fluent-bit
       namespace: tanzu-system-logging
-
+  postBuild:
+    substitute:
+      splunk_url: ${splunk_url}
+      splunk_port: ${splunk_port}
+      splunk_token: ${splunk_token}
