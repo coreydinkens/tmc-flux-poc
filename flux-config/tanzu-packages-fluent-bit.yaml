@@ -5,8 +5,8 @@ metadata:
   name: tanzu-packages-fluent-bit
   namespace: tanzu-continuousdelivery-resources
 spec:
-  dependsOn:
-    - name: tanzu-packages-cert-manager
+  #dependsOn:
+    #- name: tanzu-packages-cert-manager
   interval: 1m0s
   path: ./fluent-bit
   prune: true
