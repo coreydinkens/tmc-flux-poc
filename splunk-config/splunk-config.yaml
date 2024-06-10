@@ -37,7 +37,7 @@ subjects:
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
-  name: input-resource-reader
+  name: input-resource-reader-splunk
   namespace: packages
 roleRef:
   apiGroup: rbac.authorization.k8s.io
@@ -84,6 +84,7 @@ metadata:
   namespace: tanzu-continuousdelivery-resources
 spec:
   fromNamespace: packages
+
 # ---
 # apiVersion: secretgen.carvel.dev/v1alpha1
 # kind: SecretImport
