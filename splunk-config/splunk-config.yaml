@@ -71,7 +71,7 @@ spec:
 apiVersion: secretgen.carvel.dev/v1alpha1
 kind: SecretExport
 metadata:
-  name: splunk-config
+  name: splunk-logging
   namespace: packages
 spec:
   toNamespace: '*'
@@ -80,7 +80,7 @@ spec:
 apiVersion: secretgen.carvel.dev/v1alpha1
 kind: SecretImport
 metadata:
-  name: splunk-config
+  name: splunk-logging
   namespace: tanzu-continuousdelivery-resources
 spec:
   fromNamespace: packages
@@ -88,7 +88,7 @@ spec:
 apiVersion: secretgen.carvel.dev/v1alpha1
 kind: SecretImport
 metadata:
-  name: splunk-config
+  name: splunk-logging
   namespace: tanzu-continuousdelivery-resources
 spec:
   fromNamespace: packages
