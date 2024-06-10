@@ -37,21 +37,22 @@ subjects:
 apiVersion: secretgen.carvel.dev/v1alpha1
 kind: SecretTemplate
 metadata:
-  name: cluster-name-secret
-  namespace: vmware-system-tmc
+  name: splunk-config
+  namespace: packages
 spec:
   serviceAccountName: input-resource-reader # used to fetch input resources
   inputResources:
-  - name: config
+  - name: secret
     ref:
       apiVersion: v1
-      kind: ConfigMap
-      name: stack-config
+      kind: Secret
+      name: splunk-logging
   template:
-    type: generic
-    stringData:
-      cluster_name: $(.config.data.cluster_name)
-      tkg_instance: $(.config.data.management_cluster_name)
+    #type: generic
+    data:
+      splunk_host: $(.secret.data.splunk_host)
+      splunk_port: $(.secret.data.splunk_port)
+      splunk_key: $(.secret.data.splunk_key)
 ---
 apiVersion: secretgen.carvel.dev/v1alpha1
 kind: SecretExport
