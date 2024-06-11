@@ -11,12 +11,12 @@ resources:
 #     substituteFrom:
 #       - kind: Secret
 #         name: splunk-config
-spec:
-  postBuild:
-    substitute:
-      splunk_url: ${splunk_url}
-      splunk_port: ${splunk_port}
-      splunk_token: ${splunk_token}
+# spec:
+#   postBuild:
+#     substitute:
+#       splunk_url: ${splunk_url}
+#       splunk_port: ${splunk_port}
+#       splunk_token: ${splunk_token}
 
 # secretGenerator:
 # - name: fluent-bit-packages-values
