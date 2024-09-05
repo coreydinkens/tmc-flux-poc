@@ -1,4 +1,6 @@
-# *This repository is no longer being maintained. Please test and validate you configurations/deploymments before using them in production* #
+#------> *This repository is no longer being maintained. Please test and validate you configurations/deploymments before using them in production* <------#
+
+
 
 # GitOps with FluxCD with Tanzu Packages or Helm Charts
 
