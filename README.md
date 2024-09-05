@@ -1,3 +1,5 @@
+# *This repository is no longer being maintained. Please test and validate you configurations/deploymments before using them in production* #
+
 # GitOps with FluxCD with Tanzu Packages or Helm Charts
 
 **Because this repository is intended to be used with Tanzu Mission Control, I am referring to certain values configured by Tanzu Mission Control such as the Flux GitRepository object. For the purposes of this example my repo is named 'fluxcd-poc' and is referred-to throughout the kustomization YAMLs.**
